@@ -1,26 +1,20 @@
-class cuenta:
+class Cuenta:
   def __init__(self,titular,saldo=0):
      self.titular=titular
      self.saldo=saldo
-     def mostrar(self,titutar,saldo):
-        print('Nombre',titular, '$',saldo)
-     def ingreso(self,num_1):
-       self.saldo+=num_1
-       print(saldo+num_1)
-     def retiro(self,num_2):
-       self.saldo-=num_2
-       if num_2<saldo:
-         print(saldo-num_2)
-       else:
-         print('imposible realizar la accion')
+  def mostrar(self):
+        print('Nombre',self.titular, '$',self.saldo)
+       
+  def ingreso(self, cantidad):
+       self.saldo+=cantidad
+       print(self.saldo)
+       
+  def retiro(self,cantidad):
+    self.saldo-=cantidad
+    print(self.saldo)
 
 
-
-
-
-         
-
-cuenta_1=cuenta('Roxana',35000)       
-cuenta.mostrar()
-cuenta.ingresar(7000)
-cuenta.retirar(30000)
+cuenta_1=Cuenta('Roxana',35000)      
+cuenta_1.mostrar()
+cuenta_1.ingreso(7000)
+cuenta_1.retiro(30000)
